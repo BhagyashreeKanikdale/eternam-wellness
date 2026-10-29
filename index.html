@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eternam Wellness | Ancient Wisdom, Modern Wellness</title>
+
+    <meta name="description"
+          content="Discover Ayurvedic treatments, relaxing wellness rituals and personalized therapies at Eternam Wellness.">
+
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Eternam Wellness">
+    <meta property="og:description"
+          content="Reconnect with your mind, body and soul through personalized wellness rituals.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+    <header class="header" id="home">
+        <a href="#home" class="logo">
+            <span class="lotus">❀</span>
+            <span>ETERNAM<small>W E L L N E S S</small></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="navigation" id="navigation">
+            <a href="#home" class="active">Home</a>
+            <a href="#treatments">Treatments</a>
+            <a href="#philosophy">Experience</a>
+            <a href="#testimonials">Journal</a>
+            <a href="#contact">Contact</a>
+            <a href="#booking" class="nav-booking">Book a Ritual →</a>
+        </nav>
+    </header>
+
+    <main>
+
+        
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">ANCIENT WISDOM · MODERN WELLNESS</p>
+
+                <h1>Wellness<br>
+                    <span>Beyond</span> Routine.
+                </h1>
+
+                <p class="hero-description">
+                    At Eternam Wellness, we blend the timeless wisdom
+                    of Ayurveda with modern luxury to help you relax,
+                    rejuvenate and reconnect with your true self.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#treatments" class="button button-rose">
+                        Explore Treatments →
+                    </a>
+
+                    <button class="story-button" id="storyButton">
+                        <span class="play-icon">▶</span>
+                        Watch Our Story
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-caption">
+                <span>✿</span>
+                <p>A Sanctuary<br>For Your Mind,<br>Body and Soul.</p>
+            </div>
+
+            <div class="hero-features">
+                <span>♧ Ancient Ayurveda</span>
+                <span>❀ Personalized Care</span>
+                <span>♧ Luxury Ambience</span>
+                <span>♧ Holistic Living</span>
+            </div>
+        </section>
+
+        
+        <section class="philosophy section" id="philosophy">
+            <div class="philosophy-content">
+                <p class="eyebrow">OUR PHILOSOPHY</p>
+
+                <h2>Where Ancient<br>
+                    Healing Meets<br>
+                    Modern Living
+                </h2>
+
+                <p>
+                    We believe true wellness comes from harmony
+                    between body, mind and nature. Every experience
+                    at Eternam is thoughtfully designed to restore
+                    your natural rhythm and bring lasting well-being.
+                </p>
+
+                <a href="#contact" class="button button-dark">
+                    Discover Our Story →
+                </a>
+            </div>
+
+            <div class="philosophy-image">
+                <img src="assets/philosophy.jpg"
+                     alt="Peaceful wellness spa interior with natural light and plants">
+            </div>
+
+            <div class="wellness-principles">
+                <article>
+                    <span>❀</span>
+                    <div>
+                        <h3>Cleanse</h3>
+                        <p>Detoxify and release what no longer serves you.</p>
+                    </div>
+                </article>
+
+                <article>
+                    <span>♧</span>
+                    <div>
+                        <h3>Rejuvenate</h3>
+                        <p>Restore harmony with ancient Ayurvedic techniques.</p>
+                    </div>
+                </article>
+
+                <article>
+                    <span>❋</span>
+                    <div>
+                        <h3>Balance</h3>
+                        <p>Feel centered, calm and more focused.</p>
+                    </div>
+                </article>
+
+                <article>
+                    <span>✿</span>
+                    <div>
+                        <h3>Radiate</h3>
+                        <p>Bring out a healthier, more radiant you.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        
+        <section class="treatments section" id="treatments">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">OUR SIGNATURE TREATMENTS</p>
+                    <h2>Carefully Curated<br>Rituals for Your Well-Being</h2>
+                </div>
+
+                <div class="treatment-controls">
+                    <p>
+                        Discover our range of Ayurvedic treatments,
+                        designed to restore balance, relieve stress
+                        and enhance your overall well-being.
+                    </p>
+
+                    <button class="circle-button" id="treatmentPrev"
+                            aria-label="Previous treatments">←</button>
+                    <button class="circle-button dark-circle"
+                            id="treatmentNext"
+                            aria-label="Next treatments">→</button>
+                </div>
+            </div>
+
+            <div class="treatment-grid" id="treatmentGrid">
+
+                <article class="treatment-card">
+                    <img src="assets/treatment-abhyanga.jpeg"
+                         alt="Abhyanga Ayurvedic full body oil massage">
+                    <div class="treatment-info">
+                        <span class="treatment-icon">❀</span>
+                        <h3>Abhyanga</h3>
+                        <p>
+                            A traditional full-body oil massage to
+                            improve circulation, reduce stress and
+                            nourish the body.
+                        </p>
+                        <a href="#booking">Learn More →</a>
+                    </div>
+                </article>
+
+                <article class="treatment-card">
+                    <img src="assets/treatment-shirodhara.jpeg"
+                         alt="Relaxing Shirodhara Ayurvedic oil treatment">
+                    <div class="treatment-info">
+                        <span class="treatment-icon">♧</span>
+                        <h3>Shirodhara</h3>
+                        <p>
+                            A calming therapy to soothe the mind,
+                            relieve anxiety and improve sleep quality.
+                        </p>
+                        <a href="#booking">Learn More →</a>
+                    </div>
+                </article>
+
+                <article class="treatment-card">
+                    <img src="assets/treatment-facials.jpeg"
+                         alt="Rejuvenating Ayurvedic facial treatment">
+                    <div class="treatment-info">
+                        <span class="treatment-icon">✿</span>
+                        <h3>Ayurvedic Facials</h3>
+                        <p>
+                            Rejuvenating facials for healthy, radiant
+                            skin using natural herbs and oils.
+                        </p>
+                        <a href="#booking">Learn More →</a>
+                    </div>
+                </article>
+
+                <article class="treatment-card">
+                    <img src="assets/treatment-wellness-packages.jpeg"
+                         alt="Wellness package with flowers, oils and spa essentials">
+                    <div class="treatment-info">
+                        <span class="treatment-icon">❋</span>
+                        <h3>Wellness Packages</h3>
+                        <p>
+                            Customized packages for detox, stress
+                            relief, weight management and overall wellness.
+                        </p>
+                        <a href="#booking">Learn More →</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        
+        <section class="statistics">
+            <div class="stat-grid">
+                <div>
+                    <h2>15+</h2>
+                    <p>Years of<br>Excellence</p>
+                </div>
+
+                <div>
+                    <h2>10K+</h2>
+                    <p>Happy<br>Guests</p>
+                </div>
+
+                <div>
+                    <h2>5+</h2>
+                    <p>Luxury<br>Locations</p>
+                </div>
+
+                <div>
+                    <h2>50+</h2>
+                    <p>Expert<br>Therapists</p>
+                </div>
+            </div>
+
+            <blockquote>
+                <span>“</span>
+                <p>
+                    Wellness is a journey<br>
+                    of self-discovery, not<br>
+                    a destination.
+                </p>
+                <cite>— ETERNAM</cite>
+            </blockquote>
+        </section>
+
+        
+        <section class="testimonials section" id="testimonials">
+            <div class="testimonial-heading">
+                <p class="eyebrow">TESTIMONIALS</p>
+                <h2>Real People.<br>Real Transformations.</h2>
+
+                <div class="testimonial-controls">
+                    <button class="circle-button" id="testimonialPrev"
+                            aria-label="Previous testimonial">←</button>
+                    <button class="circle-button" id="testimonialNext"
+                            aria-label="Next testimonial">→</button>
+                </div>
+            </div>
+
+            <article class="testimonial-card">
+                <span class="quote-mark">“</span>
+
+                <div>
+                    <p id="testimonialText">
+                        The experience at Eternam Wellness was truly
+                        transformative. The therapies, the ambience
+                        and the staff — everything was perfect.
+                        I left feeling lighter, calmer and more energized.
+                    </p>
+
+                    <div class="testimonial-person">
+                        <img src="assets/testimonial-priya.jpeg"
+                             alt="Portrait of customer Priya Mehta">
+
+                        <div>
+                            <h3 id="testimonialName">Priya Mehta</h3>
+                            <p id="testimonialCity">Mumbai</p>
+                        </div>
+
+                        <span class="stars">★★★★★</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        
+        <section class="booking" id="booking">
+            <div class="booking-content">
+                <p class="eyebrow">READY TO BEGIN</p>
+                <h2>Your Wellness<br>Journey Awaits</h2>
+
+                <p>
+                    Step into a world of calm, healing and self-discovery.
+                    Book your personalized Ayurvedic ritual today.
+                </p>
+
+                <a href="#contact" class="button button-dark">
+                    Book a Ritual →
+                </a>
+            </div>
+
+            <div class="booking-words">
+                <p>RELAX</p>
+                <p>REJUVENATE</p>
+                <p>RECONNECT</p>
+                <p>THRIVE</p>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer class="footer" id="contact">
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="lotus">❀</span>
+                    <span>ETERNAM<small>W E L L N E S S</small></span>
+                </a>
+
+                <p>Ancient Wisdom. Modern Living.</p>
+
+                <div class="social-links">
+                    <a href="#contact" aria-label="Instagram">◎</a>
+                    <a href="#contact" aria-label="Facebook">f</a>
+                    <a href="#contact" aria-label="YouTube">▶</a>
+                </div>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#treatments">Treatments</a>
+                <a href="#philosophy">Experience</a>
+                <a href="#testimonials">Journal</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div>
+                <h3>Our Locations</h3>
+                <p>📍 Bandra, Mumbai</p>
+                <p>📍 Indiranagar, Bengaluru</p>
+                <p>📍 Jubilee Hills, Hyderabad</p>
+                <p>📍 Anna Nagar, Chennai</p>
+                <p>📍 MG Road, Kochi</p>
+            </div>
+
+            <div>
+                <h3>Get In Touch</h3>
+                <p>☎ +91 9925 617 665</p>
+                <p>✉ care@eternamwellness.in</p>
+                <p>◷ Mon - Sun: 9AM - 9PM</p>
+            </div>
+
+            <div>
+                <h3>Join Our Journey</h3>
+                <p>Get wellness tips, offers and updates.</p>
+
+                <form class="newsletter" id="newsletterForm">
+                    <label class="visually-hidden" for="email">
+                        Your email address
+                    </label>
+
+                    <input type="email" id="email"
+                           placeholder="Your email address" required>
+
+                    <button type="submit" aria-label="Subscribe">→</button>
+                </form>
+
+                <p id="newsletterMessage" aria-live="polite"></p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Eternam Wellness. All rights reserved.</p>
+            <div>
+                <a href="#contact">Privacy Policy</a>
+                <a href="#contact">Terms of Service</a>
+                <span>Designed with care ♡</span>
+            </div>
+        </div>
+    </footer>
+
+    
+    <dialog id="storyDialog">
+        <button id="closeStory" class="close-dialog"
+                aria-label="Close story">×</button>
+
+        <p class="eyebrow">OUR STORY</p>
+        <h2>Ancient Wisdom. Modern Living.</h2>
+        <p>
+            At Eternam Wellness, we bring together traditional
+            Ayurvedic rituals and modern comfort to create a
+            peaceful wellness experience.
+        </p>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>

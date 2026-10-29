@@ -1,0 +1,1269 @@
+
+/* ========================================
+   1. GLOBAL STYLES
+======================================== */
+
+:root {
+    --navy: #10243b;
+    --navy-light: #1c3047;
+    --rose: #ad7477;
+    --rose-light: #e9c9c4;
+    --cream: #fbf7f4;
+    --white: #ffffff;
+    --text: #243246;
+    --muted: #737781;
+    --gold: #e9aa35;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1,
+h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    line-height: 1.08;
+}
+
+h2 {
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    letter-spacing: -1px;
+}
+
+.eyebrow {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--rose);
+    margin-bottom: 14px;
+}
+
+.section {
+    padding: 55px 5%;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 23px;
+    border-radius: 40px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.button-rose {
+    background: var(--rose);
+    color: var(--white);
+}
+
+.button-dark {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/* ========================================
+   2. HEADER AND NAVIGATION
+======================================== */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 14px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--navy);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 1.3;
+}
+
+.logo small {
+    display: block;
+    font-size: 0.53rem;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.lotus {
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 2.3vw, 32px);
+}
+
+.navigation > a {
+    font-size: 0.76rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+}
+
+.navigation > a:hover,
+.navigation > a.active {
+    color: var(--rose);
+}
+
+.navigation > a.active {
+    border-bottom: 1px solid var(--navy);
+    padding-bottom: 5px;
+}
+
+.navigation .nav-booking {
+    background: var(--navy);
+    color: var(--white);
+    padding: 12px 19px;
+    border-radius: 30px;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: var(--white);
+    color: var(--navy);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+
+/* ========================================
+   3. HERO SECTION
+======================================== */
+
+.hero {
+    min-height: 530px;
+    height: min(50vw, 650px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 90px 8.5% 100px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(251, 231, 222, 0.75) 0%,
+            rgba(251, 231, 222, 0.25) 45%,
+            rgba(16, 36, 59, 0.05) 100%
+        ),
+        url("assets/hero.jpeg") center 52% / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 530px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(3.2rem, 5vw, 5.3rem);
+    color: var(--navy);
+    letter-spacing: -2px;
+    margin-bottom: 17px;
+}
+
+.hero h1 span {
+    color: var(--rose);
+}
+
+.hero-description {
+    max-width: 440px;
+    font-size: 0.88rem;
+    line-height: 1.8;
+    margin-bottom: 23px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.story-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border: none;
+    background: transparent;
+    color: var(--navy);
+    font-size: 0.76rem;
+    font-weight: 600;
+}
+
+.play-icon {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    background: var(--white);
+    border-radius: 50%;
+    font-size: 0.8rem;
+    padding-left: 3px;
+}
+
+.hero-caption {
+    position: absolute;
+    right: 9%;
+    top: 40%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--white);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-caption span {
+    font-size: 2.5rem;
+}
+
+.hero-caption p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.hero-features {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+    padding: 12px 5%;
+    color: var(--white);
+    background: rgba(22, 40, 61, 0.48);
+    backdrop-filter: blur(12px);
+}
+
+.hero-features span {
+    font-size: 0.76rem;
+    padding: 0 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-features span:last-child {
+    border-right: none;
+}
+
+
+/* ========================================
+   4. PHILOSOPHY SECTION
+======================================== */
+
+.philosophy {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 0.65fr;
+    align-items: center;
+    gap: 28px;
+    min-height: 390px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.philosophy-content h2 {
+    margin-bottom: 20px;
+}
+
+.philosophy-content > p:not(.eyebrow) {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 23px;
+    max-width: 340px;
+}
+
+.philosophy-image {
+    height: 320px;
+    overflow: hidden;
+    border-radius: 48% 8px 8px 48%;
+}
+
+.philosophy-image img {
+    height: 100%;
+}
+
+.wellness-principles {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.wellness-principles article {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.wellness-principles article > span {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ece8e2;
+    color: var(--navy);
+    font-size: 1.4rem;
+}
+
+.wellness-principles article:nth-child(even) > span {
+    background: var(--rose-light);
+}
+
+.wellness-principles h3 {
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+}
+
+.wellness-principles p {
+    font-size: 0.68rem;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+
+/* ========================================
+   5. SIGNATURE TREATMENTS
+======================================== */
+
+.treatments {
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 23px;
+}
+
+.section-heading h2 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.treatment-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 470px;
+}
+
+.treatment-controls p {
+    max-width: 260px;
+    font-size: 0.7rem;
+    color: var(--muted);
+    margin-right: 8px;
+}
+
+.circle-button {
+    flex-shrink: 0;
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--navy);
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.circle-button:hover {
+    transform: scale(1.08);
+}
+
+.dark-circle {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.treatment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.treatment-card {
+    min-width: 0;
+    background: var(--white);
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 0 7px 25px rgba(35, 39, 50, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.treatment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(35, 39, 50, 0.1);
+}
+
+.treatment-card > img {
+    height: 155px;
+    object-position: center;
+}
+
+.treatment-info {
+    position: relative;
+    padding: 18px 17px 20px;
+}
+
+.treatment-icon {
+    position: absolute;
+    top: -25px;
+    left: 15px;
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: var(--cream);
+    color: var(--rose);
+    font-size: 1.25rem;
+}
+
+.treatment-info h3 {
+    font-size: 0.88rem;
+    margin-bottom: 6px;
+}
+
+.treatment-info p {
+    font-size: 0.72rem;
+    line-height: 1.65;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.treatment-info a {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+
+/* ========================================
+   6. STATISTICS BANNER
+======================================== */
+
+.statistics {
+    position: relative;
+    min-height: 270px;
+    padding: 55px 8%;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    background:
+        linear-gradient(
+            rgba(12, 30, 51, 0.25),
+            rgba(12, 30, 51, 0.7)
+        ),
+        url("assets/stats-banner.jpg") center / cover no-repeat;
+}
+
+.stat-grid {
+    width: 67%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.stat-grid > div {
+    text-align: center;
+    padding: 0 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.stat-grid > div:last-child {
+    border-right: none;
+}
+
+.stat-grid h2 {
+    font-size: clamp(2rem, 3.4vw, 3.2rem);
+    margin-bottom: 7px;
+}
+
+.stat-grid p {
+    font-size: 0.76rem;
+    line-height: 1.5;
+}
+
+.statistics blockquote {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    border-radius: 180px 0 0 180px;
+    background: rgba(113, 75, 92, 0.94);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px 35px 25px 65px;
+}
+
+.statistics blockquote > span {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--rose-light);
+}
+
+.statistics blockquote p {
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.statistics blockquote cite {
+    font-size: 0.6rem;
+    letter-spacing: 4px;
+    font-style: normal;
+}
+
+
+/* ========================================
+   7. TESTIMONIALS
+======================================== */
+
+.testimonials {
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr;
+    align-items: center;
+    gap: 50px;
+    min-height: 255px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+}
+
+.testimonial-heading h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.testimonial-controls {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.testimonial-controls .circle-button {
+    background: #eee8e4;
+}
+
+.testimonial-card {
+    display: flex;
+    gap: 15px;
+    padding: 25px;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(35, 39, 50, 0.06);
+}
+
+.quote-mark {
+    font-family: "Playfair Display", serif;
+    color: var(--rose);
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.testimonial-card > div {
+    flex: 1;
+    min-width: 0;
+}
+
+#testimonialText {
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.testimonial-person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.testimonial-person img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.testimonial-person h3 {
+    font-size: 0.8rem;
+}
+
+.testimonial-person p {
+    font-size: 0.7rem;
+    color: var(--muted);
+}
+
+.stars {
+    color: var(--gold);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-left: auto;
+}
+
+
+/* ========================================
+   8. BOOKING SECTION
+======================================== */
+
+.booking {
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: stretch;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(16, 36, 59, 0.04)
+        ),
+        url("assets/booking-banner.jpg") center / cover no-repeat;
+}
+
+.booking-content {
+    align-self: center;
+    max-width: 560px;
+    padding: 45px 12%;
+    background: rgba(153, 100, 105, 0.9);
+    color: var(--white);
+    border-radius: 0 110px 0 0;
+}
+
+.booking-content .eyebrow {
+    color: var(--rose-light);
+}
+
+.booking-content h2 {
+    font-size: clamp(2.2rem, 3.6vw, 3.3rem);
+    margin-bottom: 12px;
+}
+
+.booking-content > p:not(.eyebrow) {
+    font-size: 0.78rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    max-width: 370px;
+}
+
+.booking-content .button {
+    font-size: 0.72rem;
+}
+
+.booking-words {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 35px 12%;
+    color: var(--navy);
+}
+
+.booking-words p {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+
+/* ========================================
+   9. FOOTER
+======================================== */
+
+.footer {
+    padding: 35px 5% 15px;
+    background: var(--navy);
+    color: var(--white);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr 1.25fr 1fr 1.2fr;
+    gap: 25px;
+    padding-bottom: 30px;
+}
+
+.footer .logo {
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.footer .lotus {
+    font-size: 2.2rem;
+}
+
+.footer-brand > p {
+    margin: 16px 0;
+    font-size: 0.7rem;
+    color: #d0d7e0;
+}
+
+.footer-grid h3 {
+    font-size: 0.78rem;
+    margin-bottom: 13px;
+}
+
+.footer-grid > div:not(.footer-brand) > a {
+    display: block;
+}
+
+.footer-grid > div > a:not(.logo),
+.footer-grid > div > p {
+    font-size: 0.66rem;
+    color: #d0d7e0;
+    line-height: 2;
+}
+
+.footer-grid a:hover {
+    color: var(--rose-light);
+}
+
+.social-links {
+    display: flex;
+    gap: 18px;
+}
+
+.social-links a {
+    font-size: 1.1rem;
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 14px;
+    padding: 5px;
+    background: var(--white);
+    border-radius: 30px;
+}
+
+.newsletter input {
+    width: 100%;
+    min-width: 0;
+    padding: 9px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.68rem;
+}
+
+.newsletter button {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: var(--rose-light);
+    color: var(--navy);
+}
+
+#newsletterMessage {
+    font-size: 0.7rem;
+    margin-top: 8px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-top: 17px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-bottom p,
+.footer-bottom a,
+.footer-bottom span {
+    font-size: 0.62rem;
+    color: #d0d7e0;
+}
+
+.footer-bottom > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+
+/* ========================================
+   10. STORY DIALOG
+======================================== */
+
+#storyDialog {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: min(90%, 480px);
+    padding: 40px;
+    border: none;
+    border-radius: 20px;
+    color: var(--text);
+    background: var(--cream);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.2);
+}
+
+#storyDialog::backdrop {
+    background: rgba(9, 24, 40, 0.65);
+    backdrop-filter: blur(5px);
+}
+
+#storyDialog h2 {
+    margin-bottom: 15px;
+}
+
+#storyDialog > p:last-child {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.close-dialog {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    border: none;
+    background: transparent;
+    font-size: 1.8rem;
+    color: var(--navy);
+}
+
+
+/* ========================================
+   11. TABLET RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 1000px) {
+    .header {
+        padding: 12px 4%;
+    }
+
+    .navigation {
+        gap: 13px;
+    }
+
+    .navigation > a {
+        font-size: 0.68rem;
+    }
+
+    .logo {
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+    }
+
+    .philosophy {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wellness-principles {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .treatment-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .statistics {
+        padding-left: 4%;
+    }
+
+    .stat-grid {
+        width: 65%;
+    }
+
+    .statistics blockquote {
+        width: 34%;
+        padding-left: 45px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+/* ========================================
+   12. MOBILE RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 650px) {
+    h2 {
+        letter-spacing: -0.5px;
+    }
+
+    .section {
+        padding: 40px 5%;
+    }
+
+    .header {
+        position: absolute;
+        padding: 12px 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative;
+        z-index: 12;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 5%;
+        right: 5%;
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--cream);
+        border-radius: 16px;
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    .navigation.show {
+        display: flex;
+    }
+
+    .navigation > a {
+        padding: 12px 8px;
+        font-size: 0.85rem;
+    }
+
+    .navigation > a.active {
+        border-bottom: none;
+    }
+
+    .navigation .nav-booking {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 650px;
+        padding: 130px 6% 110px;
+        align-items: flex-start;
+        background-position: 58% center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 12vw, 4.2rem);
+    }
+
+    .hero-description {
+        max-width: 340px;
+        font-size: 0.8rem;
+    }
+
+    .hero-caption {
+        display: none;
+    }
+
+    .hero-features {
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 0;
+        padding: 14px 5%;
+    }
+
+    .hero-features span {
+        flex-shrink: 0;
+        padding: 0 14px;
+    }
+
+    .philosophy {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .philosophy-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .philosophy-image {
+        height: 270px;
+        border-radius: 120px 10px 10px 10px;
+    }
+
+    .wellness-principles {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 12px;
+    }
+
+    .wellness-principles article {
+        align-items: flex-start;
+        gap: 9px;
+    }
+
+    .wellness-principles article > span {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 2.1rem;
+    }
+
+    .treatment-controls {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .treatment-controls p {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .treatment-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .treatment-card > img {
+        height: 125px;
+    }
+
+    .treatment-info {
+        padding: 17px 12px 15px;
+    }
+
+    .treatment-info h3 {
+        font-size: 0.8rem;
+    }
+
+    .treatment-info p {
+        font-size: 0.68rem;
+    }
+
+    .treatment-icon {
+        width: 36px;
+        height: 36px;
+        top: -21px;
+    }
+
+    .statistics {
+        padding: 35px 5%;
+        flex-direction: column;
+        gap: 30px;
+        background-position: center;
+    }
+
+    .stat-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 25px;
+    }
+
+    .stat-grid > div:nth-child(2) {
+        border-right: none;
+    }
+
+    .statistics blockquote {
+        position: relative;
+        width: 100%;
+        border-radius: 70px 12px 12px 12px;
+        padding: 25px 30px;
+        min-height: 190px;
+    }
+
+    .statistics blockquote p {
+        font-size: 1.05rem;
+    }
+
+    .testimonials {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .testimonial-card {
+        padding: 18px;
+        gap: 8px;
+    }
+
+    #testimonialText {
+        font-size: 0.74rem;
+    }
+
+    .testimonial-person {
+        flex-wrap: wrap;
+    }
+
+    .stars {
+        font-size: 0.85rem;
+    }
+
+    .booking {
+        grid-template-columns: 1fr;
+        background-position: center;
+    }
+
+    .booking-content {
+        padding: 40px 7%;
+        border-radius: 0 80px 0 0;
+    }
+
+    .booking-content h2 {
+        font-size: 2.7rem;
+    }
+
+    .booking-words {
+        align-items: flex-start;
+        padding: 30px 8%;
+        background: rgba(251, 247, 244, 0.88);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 18px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-bottom > div {
+        gap: 12px;
+    }
+}
+
+
+/* ========================================
+   13. SMALL MOBILE SCREENS
+======================================== */
+
+@media (max-width: 380px) {
+    .logo {
+        font-size: 0.75rem;
+    }
+
+    .lotus {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .button {
+        padding: 12px 16px;
+    }
+
+    .treatment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .treatment-card > img {
+        height: 190px;
+    }
+
+    .wellness-principles {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+}
